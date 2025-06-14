@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator dengan History</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 flex items-center justify-center h-screen flex-col">
+  <div id="content" class="bg-gray-900 p-6 rounded-lg shadow-lg mb-4">
+    <form class="mb-4">
+      <div id="output" class="mb-4">
+        <input type="text" id="res" readonly class="w-full h-12 text-right text-2xl bg-gray-700 text-white rounded-lg border-0 outline-none" />
+      </div>
+      <div class="grid grid-cols-4 gap-2">
+        <input type="button" value="C" class="bg-red-500 text-white rounded-lg h-12" onclick="Clear()" />
+        <input type="button" value="⌫" class="bg-red-500 text-white rounded-lg h-12" onclick="Back()" />
+        <input type="button" value="%" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('%')" />
+        <input type="button" value="/" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('/')" />
+        <input type="button" value="7" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('7')" />
+        <input type="button" value="8" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('8')" />
+        <input type="button" value="9" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('9')" />
+        <input type="button" value="*" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('*')" />
+        <input type="button" value="4" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('4')" />
+        <input type="button" value="5" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('5')" />
+        <input type="button" value="6" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('6')" />
+        <input type="button" value="-" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('-')" />
+        <input type="button" value="1" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('1')" />
+        <input type="button" value="2" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('2')" />
+        <input type="button" value="3" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('3')" />
+        <input type="button" value="+" class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('+')" />
+        <input type="button" value="0" class="col-span-2 bg-gray-600 text-white rounded-lg h-12" onclick="Solve('0')" />
+        <input type="button" value="." class="bg-gray-600 text-white rounded-lg h-12" onclick="Solve('.')" />
+        <input type="button" value="=" class="bg-green-500 text-white rounded-lg h-12" onclick="Result()" />
+      </div>
+    </form>
+  </div>
+
+  <div class="history bg-white w-11/12 max-w-md p-4 rounded-lg shadow-lg">
+    <div class="flex justify-between items-center mb-2">
+      <h3 class="text-lg font-semibold">History</h3>
+      <span class="text-blue-500 cursor-pointer" onclick="hapusSemua()">Clear History</span>
+    </div>
+    <div id="historyList"></div>
+  </div>
+
+  <script type="module" src="calc.js"></script>
+</body>
+</html>
