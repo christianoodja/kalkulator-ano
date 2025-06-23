@@ -1,8 +1,8 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
 const supabase = createClient(
-  'https://zyghaumetuxzpholryup.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5Z2hhdW1ldHV4enBob2xyeXVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5MDgwNzksImV4cCI6MjA2NTQ4NDA3OX0.mM4qn4VTNxyvo7TANrHo08s1WbvcI9ECfDj7niAY1-U'
+  'https://gfdkeutgojqefygoxnow.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmZGtldXRnb2pxZWZ5Z294bm93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk4Mjk5NDksImV4cCI6MjA2NTQwNTk0OX0.vWQ70YA7egXTLg8glagWKhhjmIqpohxByA5Vgnv_eMk'
 );
 
 function Solve(val) {

@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  kalkulator-ano:
+    build: .
+    container_name: kalkulator-ano
+    ports:
+      - "8080:80"
+    restart: always
